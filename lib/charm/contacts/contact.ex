@@ -1,4 +1,4 @@
-defmodule Charm.Contact do
+defmodule Charm.Contacts.Contact do
   use Ecto.Schema
   import Ecto.Changeset
 
