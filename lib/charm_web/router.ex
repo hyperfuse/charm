@@ -1,6 +1,8 @@
 defmodule CharmWeb.Router do
   use CharmWeb, :router
 
+  import Phoenix.LiveView.Router
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -17,7 +19,7 @@ defmodule CharmWeb.Router do
   scope "/", CharmWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", ContactList
   end
 
   # Other scopes may use custom stacks.

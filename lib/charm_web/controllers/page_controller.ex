@@ -1,9 +1,8 @@
 defmodule CharmWeb.PageController do
   use CharmWeb, :controller
+  import Phoenix.LiveView.Controller
 
   def home(conn, _params) do
-    # The home page is often custom made,
-    # so skip the default app layout.
-    render(conn, :home)
+    live_render(conn, ContactList, session: %{})
   end
 end

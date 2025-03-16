@@ -45,6 +45,7 @@ defmodule CharmWeb do
       use Gettext, backend: CharmWeb.Gettext
 
       import Plug.Conn
+      import Phoenix.LiveView.Controller
 
       unquote(verified_routes())
     end
